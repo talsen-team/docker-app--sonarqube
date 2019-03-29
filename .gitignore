@@ -9,6 +9,9 @@
 !docker/server--sonarqube/default.docker
 !docker/server--sonarqube-database/
 !docker/server--sonarqube-database/default.docker
+!docker-compose/
+!docker-compose/server--sonarqube/
+!docker-compose/server--sonarqube/default.docker-compose
 !.gitignore
 !.gitmodules
 !LICENCE

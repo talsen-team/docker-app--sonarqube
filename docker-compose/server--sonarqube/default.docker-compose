@@ -1,0 +1,46 @@
+version:              '3'
+
+services:
+  server-sonarqube:
+    build:
+      context:        './../../docker/server--sonarqube'
+      dockerfile:     'default.docker'
+    container_name:   'server--sonarqube'
+    depends_on:
+      -               'server--sonarqube-database'
+    env_file:
+      -               './../../container.env'
+    image:            'talsenteam/docker-sonarqube:v7.1-alpine'
+    networks:
+      network-sonarqube:
+        ipv4_address: '10.1.0.2'
+    ports:
+      -               '80:9000'
+    volumes:
+      -               '${HOST_PATH_TO_VOLUMES_ROOT}/server--sonarqube/opt/sonarqube/conf:/opt/sonarqube/conf'
+      -               '${HOST_PATH_TO_VOLUMES_ROOT}/server--sonarqube/opt/sonarqube/data:/opt/sonarqube/data'
+      -               '${HOST_PATH_TO_VOLUMES_ROOT}/server--sonarqube/opt/sonarqube/extensions:/opt/sonarqube/extensions'
+      -               '${HOST_PATH_TO_VOLUMES_ROOT}/server--sonarqube/opt/sonarqube/lib/bundled-plugins:/opt/sonarqube/lib/bundled-plugins'
+
+  server--sonarqube-database:
+    build:
+      context:        './../../docker/server--sonarqube-database'
+      dockerfile:     'default.docker'
+    container_name:   'server--sonarqube-database'
+    env_file:
+      -               './../../container-database.env'
+    image:            'talsenteam/docker-sonarqube-database:v10.5-alpine'
+    networks:
+      network-sonarqube:
+        ipv4_address: '10.1.0.12'
+    volumes:
+      -               '${HOST_PATH_TO_VOLUMES_ROOT}/server--sonarqube-database/var/lib/postgresql:/var/lib/postgresql'
+                      # This needs explicit mapping due to https://github.com/docker-library/postgres/blob/4e48e3228a30763913ece952c611e5e9b95c8759/Dockerfile.template#L52
+      -               '${HOST_PATH_TO_VOLUMES_ROOT}/server--sonarqube-database/var/lib/postgresql/data:/var/lib/postgresql/data'
+
+networks:
+  network-sonarqube:
+    driver:           'bridge'
+    ipam:
+      config:
+        - subnet:     '10.1.0.0/16'

@@ -10,7 +10,7 @@ services:
       -               'server--sonarqube-database'
     env_file:
       -               './../../container.env'
-    image:            'talsenteam/docker-sonarqube:v7.1-alpine'
+    image:            'talsenteam/docker-sonarqube:v7.1'
     networks:
       network-sonarqube:
         ipv4_address: '10.1.0.2'
@@ -29,7 +29,7 @@ services:
     container_name:   'server--sonarqube-database'
     env_file:
       -               './../../container-database.env'
-    image:            'talsenteam/docker-sonarqube-database:v10.5-alpine'
+    image:            'talsenteam/docker-sonarqube-database:v10.5'
     networks:
       network-sonarqube:
         ipv4_address: '10.1.0.12'

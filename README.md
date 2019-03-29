@@ -1,4 +1,4 @@
-# docker-app: nextcloud
+# docker-app: sonarqube
 
 [![Docker Automated build](https://img.shields.io/docker/automated/talsenteam/docker-sonarqube.svg?style=for-the-badge)](https://hub.docker.com/r/talsenteam/docker-sonarqube/)
 [![Docker Pulls](https://img.shields.io/docker/pulls/talsenteam/docker-sonarqube.svg?style=for-the-badge)](https://hub.docker.com/r/talsenteam/docker-sonarqube/)

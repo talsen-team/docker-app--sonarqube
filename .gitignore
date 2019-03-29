@@ -4,6 +4,11 @@
 !.vscode/tasks.json
 !bash-commands
 !bash-util
+!docker/
+!docker/server--sonarqube/
+!docker/server--sonarqube/default.docker
+!docker/server--sonarqube-database/
+!docker/server--sonarqube-database/default.docker
 !.gitignore
 !.gitmodules
 !LICENCE

@@ -14,4 +14,5 @@
 !docker-compose/server--sonarqube/default.docker-compose
 !.gitignore
 !.gitmodules
+!host.env
 !LICENCE

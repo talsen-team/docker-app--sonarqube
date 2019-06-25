@@ -6,6 +6,10 @@
 !bash-util
 !docker/
 !docker/server--sonarqube/
+!docker/server--sonarqube/rootfs/
+!docker/server--sonarqube/rootfs/opt/
+!docker/server--sonarqube/rootfs/opt/server--sonarqube/
+!docker/server--sonarqube/rootfs/opt/server--sonarqube/entrypoint.sh
 !docker/server--sonarqube/default.docker
 !docker/server--sonarqube-database/
 !docker/server--sonarqube-database/default.docker

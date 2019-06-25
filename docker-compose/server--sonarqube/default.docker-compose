@@ -10,7 +10,7 @@ services:
       -               'server--sonarqube-database'
     env_file:
       -               './../../container.env'
-    image:            'talsenteam/docker-sonarqube:v7.1'
+    image:            'talsenteam/docker-sonarqube:v7.8-community'
     networks:
       network-sonarqube:
         ipv4_address: '10.1.0.2'
@@ -20,6 +20,7 @@ services:
       -               '${HOST_PATH_TO_VOLUMES_ROOT}/server--sonarqube/opt/sonarqube/conf:/opt/sonarqube/conf'
       -               '${HOST_PATH_TO_VOLUMES_ROOT}/server--sonarqube/opt/sonarqube/data:/opt/sonarqube/data'
       -               '${HOST_PATH_TO_VOLUMES_ROOT}/server--sonarqube/opt/sonarqube/extensions:/opt/sonarqube/extensions'
+      -               '${HOST_PATH_TO_VOLUMES_ROOT}/server--sonarqube/opt/sonarqube/logs:/opt/sonarqube/logs'
       -               '${HOST_PATH_TO_VOLUMES_ROOT}/server--sonarqube/opt/sonarqube/lib/bundled-plugins:/opt/sonarqube/lib/bundled-plugins'
 
   server--sonarqube-database:

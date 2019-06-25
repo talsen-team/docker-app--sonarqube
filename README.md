@@ -1,5 +1,6 @@
 # docker-app: sonarqube
 
+![GitHub tag (latest by date)](https://img.shields.io/github/tag-date/talsen-team/docker-app--sonarqube.svg?style=for-the-badge)
 [![Docker Automated build](https://img.shields.io/docker/cloud/automated/talsenteam/docker-sonarqube.svg?style=for-the-badge)](//hub.docker.com/r/talsenteam/docker-sonarqube/)
 [![Docker Pulls](https://img.shields.io/docker/pulls/talsenteam/docker-sonarqube.svg?style=for-the-badge)](//hub.docker.com/r/talsenteam/docker-sonarqube/)
 [![Docker Build Status](https://img.shields.io/docker/cloud/build/talsenteam/docker-sonarqube.svg?style=for-the-badge)](//hub.docker.com/r/talsenteam/docker-sonarqube/)

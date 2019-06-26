@@ -10,7 +10,7 @@ services:
       -               'server--sonarqube-database'
     env_file:
       -               './../../container.env'
-    image:            'talsenteam/docker-sonarqube:v7.8-community'
+    image:            'talsenteam/docker-sonarqube:v7.5-community'
     networks:
       network-sonarqube:
         ipv4_address: '10.1.0.2'
